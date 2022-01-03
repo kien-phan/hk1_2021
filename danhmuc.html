@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tất cả sản phẩm</title>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    <!-- jquery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">    
+    
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+	<link rel="stylesheet" href="./assets/css/sanpham.css">
+    <link rel="stylesheet" href="./assets/css/allic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- google roboto fonts -->
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"> <!-- font awesome-->
+    <link rel="icon" href="./assets/img/web_icon.png" type="image/x-icon" />
+</head>
+<body>
+	<div class="filter-icon">
+		<i class="ti-filter"></i>
+	</div>
+	<header class="header"></header>
+	<section class="topic">
+		<div class="container grid wide">
+			<div class="text-content">
+				<ul class="ontop">
+					<li>
+						<a href="" class="format-top">
+							<span>
+								Trang chủ
+							</span>
+						</a>						
+					</li>
+
+					<li>
+						<strong>
+							<span class="name-product">
+								Tất cả sản phẩm
+							</span>
+						</strong>
+						
+					</li>
+
+				</ul>
+				<div class="name-content" style="line-height: 30px; display: block; padding-left: 38px;">
+					Tất cả sản phẩm
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container-content grid wide">
+		<div class="row">
+			<div class="filter-container col l-3">
+				<!-- <div class="aside-item">
+					<h1>THỂ LOẠI SÁCH</h1>
+					<label class="check-container">Bìa
+						<input type="checkbox" class="checkbox_list cover"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Giấy
+						<input type="checkbox" class="checkbox_list paper"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Bút xóa
+						<input type="checkbox" class="checkbox_list correctionpen"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Hộp
+						<input type="checkbox" class="checkbox_list box"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Bút
+						<input type="checkbox" class="checkbox_list pen"> 
+						<span class="checkmark"></span>
+					</label>					
+					<label class="check-container">Máy tính
+						<input type="checkbox" class="checkbox_list calculator"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Nhãn dán
+						<input type="checkbox" class="checkbox_list label"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Sổ tay
+						<input type="checkbox" class="checkbox_list notebook"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Túi đựng
+						<input type="checkbox" class="checkbox_list bag"> 
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Vở
+						<input type="checkbox" class="checkbox_list book" > 
+						<span class="checkmark"></span>
+					</label>
+				</div> -->
+					
+				<div class="aside-item">
+					<h1>NHÀ XUẤT BẢN</h1>
+					<label class="check-container">OEM
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Stationary
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="aside-item">
+					<h1>SẮP XẾP THEO GIÁ</h1>
+					<label class="check-container">Giá thấp đến cao
+						<input type="radio" name="check_price-radio" id="ascending">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check-container">Giá cao xuống thấp
+						<input type="radio" name="check_price-radio" id="reduce1">
+						<span class="checkmark"></span>
+					</label>
+				</div>		
+                <img src="./assets/img/sanpham/img_aside_banner.jpg" class="">
+			</div>
+			<div class="col l-9 m-12 c-12">
+				<div class="allProduct">
+					<div class="row renderPageProduct">
+							
+					</div>
+                    <ul class="listPageNumber">
+                        <li class="listPageNumber-item"></li>
+                    </ul>
+				</div>					
+			</div>
+		</div>
+	</div>	
+	<footer class="footer"></footer>
+	  <!-- slide-in-user-cart -->
+    <input hidden type="checkbox" name="" class="cart-input" id="cart-input-id">
+    <label for="cart-input-id" class="overlay"></label>
+    <div class="slide-in-cart">
+        <div class="slide-in-cart__heading">
+            <h4 class="slide-in-cart__title">GIỎ HÀNG</h4>
+            <label for="cart-input-id" class="slide-in-cart__close">
+                <svg class="slide-in-cart__close-icon" viewBox="0 0 16 14">
+                    <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                </svg>
+            </label>
+        </div>
+        <ul class="cart__list">
+           <!-- render -->
+        </ul>
+        <div class="cart__pay">
+            <div class="cart__pay-totalPrice">
+                <div class="cart__pay-totalPrice-text">Tổng tiền</div>
+                <div class="cart__pay-totalPrice-number">35.000₫</div>
+            </div>
+            <button class="cart__pay-btn">Thanh toán</button>
+        </div>
+    </div>
+    <!-- Modal log-in, register -->
+    <div class="modal js-modal-login js-modal-close">
+        <div class="modal-container js-modal-container">
+            <div class="modal-header">
+                <button class="modal-header__btn modal__header-active-btn">Đăng nhập</button>
+                <button class="modal-header__btn js-click-register">Đăng ký</button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <ul class="modal-body__list">
+                        <li class="modal-body__item">
+                            <label for="log-in-email" class="modal-label">
+                                EMAIL
+                                <span>*</span>
+                            </label>
+                            <input id="log-in-email" required type="email" class="modal-input"  placeholder="Nhập Địa chỉ Email">
+                        </li>
+                        <li class="modal-body__item">
+                            <label for="log-in-password" class="modal-label">
+                                MẬT KHẨU
+                                <span>*</span>
+                            </label>
+                            <input id="log-in-password" required type="password" class="modal-input" placeholder="Nhập Mật khẩu">
+                        </li>
+                    </ul>
+                    <a href="" class="modal__forget-pass">Quên mật khẩu?</a>
+                    <div class="modal-body__btn">
+                        <button class="modal__btn js-modal-close">Trở lại</button>
+                        <input type="button" id="btn_submit-login" class="modal__btn" value="Đăng nhập"></input>
+                    </div>
+                </form>
+                <p class="log-in-note">Stationery cam kết bảo mật và sẽ không bao giờ đăng
+                hay chia sẻ thông tin mà chưa có được sự đồng ý của bạn.</p>
+            </div>
+            <div class="modal__footer js-login-content">
+                <span>hoặc đăng nhập qua</span>
+                <a href="" class="modal__footer-link">
+                    <img src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg" alt="" class="modal__footer-img">
+                </a>
+                <a href="" class="modal__footer-link">
+                    <img src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg" alt="" class="modal__footer-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal js-modal-register js-modal-close">
+        <div class="modal-container js-modal-container">
+            <div class="modal-header">
+                <button class="modal-header__btn js-click-login">Đăng nhập</button>
+                <button class="modal-header__btn modal__header-active-btn">Đăng ký</button>
+            </div>
+            <div class="modal-body">
+                <form action="" id="formRegister">
+                    <ul class="modal-body__list">
+                        <li class="modal-body__item form-group">
+                            <label for="register-family-name" class="modal-label">
+                                HỌ
+                                <span>*</span>
+                            </label>
+                            <input id="register-family-name" type="text" class="modal-input" required placeholder="Nhập Họ">
+                            <span class="form-message"></span>
+                        </li>
+                        <li class="modal-body__item form-group">
+                            <label for="register-name" class="modal-label">
+                                TÊN
+                                <span>*</span>
+                            </label>
+                            <input id="register-name" type="text" class="modal-input" required placeholder="Nhập Tên">
+                            <span class="form-message"></span>
+                        </li>
+                        <li class="modal-body__item form-group">
+                            <label for="register-name" class="modal-label">
+                                SỐ ĐIỆN THOẠI
+                                <span>*</span>
+                            </label>
+                            <input id="register-phone" type="tel" class="modal-input" required placeholder="Nhập Số điện thoại">
+                            <span class="form-message"></span>
+                        </li>
+                        <li class="modal-body__item form-group">
+                            <label for="register-email" class="modal-label">
+                                EMAIL
+                                <span>*</span>
+                            </label>
+                            <input id="register-email" type="email" class="modal-input" required placeholder="Nhập Địa chỉ Email">
+                            <span class="form-message"></span>
+                        </li>
+                        <li class="modal-body__item form-group">
+                            <label for="register-password" class="modal-label">
+                                MẬT KHẨU
+                                <span>*</span>
+                            </label>
+                            <input id="register-password" type="password" class="modal-input" required placeholder="Nhập Mật khẩu">
+                            <span class="form-message"></span>
+                        </li>
+                    </ul>
+                    <div class="modal-body__btn">
+                        <button class="modal__btn js-modal-close">Trở lại</button>
+                        <input type="submit" class="modal__btn" id="input_submit-register" value="Tạo tài khoản"></input>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__footer js-login-content">
+                <span>hoặc đăng nhập qua</span>
+                <a href="" class="modal__footer-link">
+                    <img src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg" alt="" class="modal__footer-img">
+                </a>
+                <a href="" class="modal__footer-link">
+                    <img src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg" alt="" class="modal__footer-img">
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <!-- js header text -->
+    <script>
+        $(document).ready(function() {
+            var slogans = ["Stationary lựa chọn số 1 của bạn - Hãy đến với chúng tôi", "Stationary lựa chọn số 1 cho bạn"]
+            var textBlock = $(".header__navbar-slogan span");
+            textBlock.html(slogans[1]);
+            var i = 0;
+                setInterval (function () {
+                    textBlock.fadeOut(function () {
+                        textBlock.html(slogans[i]);
+                        i++;
+                        if (i == 2) i = 0;
+                        textBlock.fadeIn();
+                    })  
+                }, 3000);
+        })
+    </script>
+    <div class="overlay-cate"></div>
+	<div class="overlay-filter"></div>
+</body>
+<script src="./assets/js/base.js"></script>
+<script src="./assets/js/render.js"></script>
+<script>
+	document.querySelector('.filter-icon').onclick = function() {
+		document.querySelector('.filter-container').classList.toggle('filter-container--open')
+		document.querySelector('.filter-icon').classList.toggle('filter-icon--control')
+		document.querySelector('.overlay-filter').classList.toggle('overlay-open')
+	}
+	document.querySelector('.overlay-filter').onclick = function() {
+		document.querySelector('.filter-container').classList.toggle('filter-container--open')
+		document.querySelector('.filter-icon').classList.toggle('filter-icon--control')
+		document.querySelector('.overlay-filter').classList.toggle('overlay-open')
+	}
+	$('.category').on('click',function(){
+  		$('.overlay-cate').show();
+	}) 
+	$('.overlay-cate').on('click',function(){
+  		$('.overlay-cate').hide();
+	});
+
+    var arrowIcons = document.querySelectorAll('.category__inside-list i')
+var cateListHeading = document.querySelectorAll('.category__inside-heading')
+for (icon of arrowIcons) {
+    icon.onclick = function () {
+        this.classList.toggle('cate-list-open')
+        var nextSibling = this.nextElementSibling;
+        while (nextSibling) {
+            nextSibling.classList.toggle('cate-item-open')
+            nextSibling = nextSibling.nextElementSibling;
+        }
+        var prevSibling = this.previousElementSibling;
+        while (prevSibling) {
+            prevSibling.classList.toggle('change-to-primary-color')
+            prevSibling = prevSibling.nextElementSibling;
+        }
+    }
+}
+var footerLists = document.querySelectorAll('.footer__content-heading');
+var footerArrows = document.querySelectorAll('.footer__content-heading i')
+    for (list of footerLists)
+    {
+        list.onclick = function () {
+            this.nextElementSibling.classList.toggle('js-footer-list')
+            this.childNodes[0].classList.toggle('footer__arrow-change')
+        }    
+    }
+</script>
+<!-- <script src="./assets/js/allproduct.js"></script> -->
+<script src="./assets/js/danhmuc.js"></script>
+</html>

@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    display: block;
+}
+.content{
+    font-family: Merriweather;
+    font-size: 14px;
+    line-height: 1.4em;
+    word-wrap: break-word;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 0 2em;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    padding-bottom: 0px;
+}
+.main_header{
+    background-color: #ffff;
+    min-height: 80px;
+    font-size: 0.5em;
+    padding-bottom: 21px;
+}
+.main_content{
+    background-color: #ffff;
+    padding-bottom: 1.5em;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+aside{
+    background-color: #fafafa;
+}
+.logo{
+    height: 70px;
+    text-align: center;
+}
+.logo img{
+    width: 80%;
+}
+.section{
+    background-color: #ffff;
+    display: block;
+}
+.section_header{
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+h1, h2{
+    display: block;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+a span{
+    color: black;
+    font-size: 0.9em;
+}
+.login:hover{
+    color: #ffff;
+    background: #333;
+}
+.sheet{
+    margin: -0.4em;
+}
+.sheet_fill{
+    padding: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+input{
+    padding: 0.35em;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #CECECD;
+}
+.sheet_input{
+    height: 2.5rem;
+}
+#cod,#momo{
+    width: 10% !important;
+    height: 1rem !important;
+    display: inline;
+}
+.sidebar{
+    color: #CECECD;
+    position: relative;
+    border: 1px solid #DBDCDA;
+    border-right: none;
+}
+.sidebar::after{
+    content: "";
+    display: block;
+    width: 200%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #fafafa;
+    z-index: -1;
+}
+.sidebar_header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 28px;
+    border: 1px solid #DBDCDA;
+    border-right: none;
+}
+.sidebar_content{
+    padding-left: 28px;
+}
+.sidebar_product{
+    padding: 1em 0;
+}
+table{
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    width: 100%;
+    margin: 0;
+    color: black;
+}
+.hidden{
+    width: 2px;
+    height: 2px;
+    border: 0;
+    margin: -2px;
+    position: absolute;
+    visibility: hidden !important;
+    overflow: hidden!important;
+}
+th{
+    font-weight: normal;
+    text-align: left;
+}
+.product td{
+    padding-top: 1em;
+}
+.product-thumbnail{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: #fff;
+    position: relative;
+    text-align: left;
+}
+.product_wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.product_image{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+.product_quantity{
+    color: #ffff;
+    background-color: black;
+    font-size: 0.78em;
+    padding: 0 0.62em;
+    border-radius: 2em;
+    position: absolute;
+    right: -0.9em;
+    top: -0.55em;
+    min-width: 1.75em;
+    line-height: 1.75em;
+}
+.product_table tbody th{
+    padding-left: 1em;
+    font-weight: 500;
+    color: #333;
+}
+.product_name{
+    display: block;
+}
+.product_property{
+    font-size: 0.85em;
+    color: #969696;
+}
+.product_price{
+    padding-left: 1em;
+}
+.promotion{
+    padding: 1em 0;
+    border-top: 1px solid #DBDCDA ;
+}
+.promotion_input{
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.promotion_input input{
+    width: 65%;
+    height: 2rem;
+}
+button{
+    display: inline-block;
+    cursor: pointer;
+    color: #ffff;
+    background-color: black;
+    border-color: black;
+    border-radius: 8px;
+    width: auto;
+    margin-left: 0.5em;
+    padding: 0.49em 1.2em;
+}
+.total{
+    border-top: 1px solid #DBDCDA ;
+    padding: 1em 0;
+}
+.total-line_name{
+    padding-top: 0.75em;
+}
+.total-line_price{
+    padding-top: 0.75em;
+    padding-left: 1.5em;
+    text-align: right;
+}
+.total-all{
+    font-size: 1.2rem;
+}
+.home{
+    float: left;
+    display: block;
+    padding: 1.2rem 1.5em;
+    color: black;
+    background-color: #fafafa;
+    border:1px solid #fafafa;
+    margin: 0;
+}
+.checkout{
+    float: right;
+    padding: 1rem 1.5em;
+}
+.transport{
+    padding-top: 1rem;
+}
+.payment{
+    padding-top: 1rem;
+}
+
+
+/* Respnsive*/
+
+
+@media only screen and (min-width:1024px) {
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+}
+@media only screen and (max-width:1024px){
+    header{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+}
+@media only screen and (max-width:992px){
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5.5rem;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #CECECD;
+        border-bottom: 1px solid #CECECD;
+    }
+    .menu_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+        box-sizing: border-box;
+        color: #CECECD;
+        position: relative;
+        border-right: none;
+    }
+    .menu_header span{
+        color: black;
+    }
+    .logo img{
+        width: 50%;
+        text-align: center;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_header{
+        display: none;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .sidebar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar_header{
+        display: none;
+    }
+}

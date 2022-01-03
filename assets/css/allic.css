@@ -1,0 +1,352 @@
+/* my edit */
+body {
+  position: relative;
+}
+
+.container-content {
+  position: relative;
+}
+.product-item {
+  margin-bottom: 16px;
+}
+.product-item__img {
+  height: 272px;
+  margin-bottom: 8px;
+}
+
+.aside-item:last-child img {
+  top: 110px;
+  left: 0;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin: 16px 0 0 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.check-container:hover {
+  color: var(--primary-color);
+}
+.check-container:hover input ~ .checkmark {
+  background-color: rgb(153, 118, 118);
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.aside-item h1 {
+  margin: 16px 0 0 0;
+}
+
+.filter-icon {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 30%;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  width: 50px;
+  height: 50px;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 68;
+  transition: all ease 0.5s;
+}
+
+.filter-icon i {
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.overlay-filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: fadeIn linear 0.2s;
+  display: none;
+  z-index: 67;
+}
+
+.overlay-open {
+  display: block;
+}
+
+.filter-icon--control {
+  transform: translateX(-286px);
+}
+
+@media (max-width: 63.9375em) {
+  .filter-container {
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 69;
+    border-radius: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    transform-origin: left center;
+    opacity: 0;
+    transform: translateX(306px);
+    transition: all ease 0.4s;
+  }
+  .filter-container::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-container--open {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .filter-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 46.1875em) {
+  .footer__payment .footer__content-heading {
+    margin-top: 30px;
+  }
+  .product-item__img {
+    height: 177px;
+  }
+}
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .product-item__img {
+    height: 220px;
+  }
+}
+
+.product-block-item .product-action {
+  text-align: center;
+  height: 70px;
+  width: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.product-block-item .product-transition {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 272px;
+}
+
+.product-block-item .product-transition img {
+  width: auto !important;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.product-block-item .product-thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+.product-block-item .product-info {
+  text-align: center;
+  padding: 0 10px 10px;
+  text-align: center;
+}
+
+.product-block-item .product-info .item-product-name {
+  padding-top: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+}
+
+.product-block-item .product-info .product__price {
+  /*-webkit-transition: all 0.15s;*/
+  transition: all 0.15s;
+  font-size: 18px;
+  color: #9c8350;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.d-flex {
+  display: flex !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.product-block-item .group-buttons {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.product-block-item .group-buttons .cart-button {
+  width: 150px;
+  background: #9c8350;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+}
+.aside-item {
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.aside-item:last-child {
+  border: 3px solid red;
+}
+.aside-item .aside-title {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #5b5b5e;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  padding-right: 25px;
+}
+.filter-group {
+  margin-bottom: 0px;
+}
+.filter-group ul {
+  max-height: 290px;
+  overflow-y: auto;
+}
+.filter-item {
+  margin: 0;
+  cursor: pointer;
+  line-height: 27px;
+}
+
+.filter-item * {
+  color: #6c757d;
+  cursor: pointer;
+  font-size: em(14px);
+  font-weight: normal;
+}
+
+.filter-item--check-box input {
+  display: none;
+}
+.filter-item--check-box .fa {
+  margin-right: 5px;
+  width: 14px;
+  position: relative;
+  display: inline-block;
+}
+.filter-item--check-box input + .fa:before {
+  content: "";
+  margin-right: 5px;
+  border-radius: 50%;
+  font-size: 18px;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  line-height: 40px;
+  position: absolute;
+  top: -8px;
+  height: 9px !important;
+  width: 9px;
+}
+i {
+  font-style: italic;
+}
+.filter-item--check-box input + .fa:focus {
+  background-color: brown;
+}
+
+.listPageNumber {
+  display: flex;
+  justify-content: center;
+}
+.listPageNumber-item {
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}

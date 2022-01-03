@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="stylesheet" href="./assets/css/checkout.css">
+    <script src="./assets/js/checkout.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="banner">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#">
+                    <img alt="Template Stationery" src="logo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <aside class="menu">
+		<div class="menu_header">
+            <h2 class="sidebar_title">
+                Đơn hàng (1 sản phẩm)
+            </h2>
+            <span>29000đ</span>
+        </div>
+	</aside>
+    <div class="content">
+        <div class="wrapper">
+            <div class="main">
+                <div class="main_header">
+                    <div class="logo">
+                        <a href="#">
+                            <img alt="Template Stationery" src="logo.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="main_content">
+                    <div class="row">
+                        <div class="col">
+                            <section class="section">
+                                <div class="section_header">
+                                    <h1>Thông tin nhận hàng</h1>
+                                    <a href="#">
+                                        <i class="fas fa-user"></i>
+                                        <span class="login">Đăng nhập</span>
+                                    </a>
+                                </div>
+                                <div class="section_content">
+                                    <div class="sheet">
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="email">Email</label>
+                                                <input type="email" class="sheet_input" 
+                                                        id="email" placeholder="VD: 123@gmail.com" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="fullname">Họ và tên</label>
+                                                <input type="fullname" class="sheet_input" 
+                                                    id="fullname" placeholder="VD: Nguyễn Văn A" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="tel">Số điện thoại <span class="text-muted">(Tùy chọn)</span></label>
+                                                <input type="tel" class="sheet_input" 
+                                                    id="tel" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="address">Địa chỉ<span class="text-muted">(Tùy chọn)</span></label>
+                                                <input type="tel" class="sheet_input" 
+                                                    id="tel" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="province">Tỉnh/Thành</span></label>
+                                                <input type="province" class="sheet_input" 
+                                                    id="province" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="district">Quận/Huyện</label>
+                                                <input type="district" class="sheet_input" 
+                                                    id="district" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="ward">Phường/xã</label>
+                                                <input type="ward" class="sheet_input" 
+                                                    id="ward" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <div class="sheet_note">
+                                                <label for="note">Ghi chú<span class="text-muted">(Tùy chọn)</span></label>
+                                                <input type="note" class="sheet_input" 
+                                                    id="note" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col">
+                            <div class="section">
+                                <div class="section_header">
+                                    <h2 class="transport">Vận chuyển</h2>
+                                </div>
+                                <div class="section_content">
+                                    <div class="sheet">
+                                        <div class="sheet_fill">
+                                            <input type="text" class="sheet_input"
+                                                id="shipping" placeholder="Vui lòng nhập thông tin giao hàng">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div class="section_header">
+                                    <h2 class="payment">Thanh toán</h2>
+                                </div>
+                                <div class="section_content">
+                                    <div class="sheet">
+                                        <div class="sheet_fill">
+                                            <input type="radio" name="" class="sheet_input"
+                                                id="cod" placeholder="">
+                                            <label for="cod">Thanh toán qua cod</label>
+                                        </div>
+                                        <div class="sheet_fill">
+                                            <input type="radio" name="" class="sheet_input"
+                                                id="momo" placeholder="">
+                                            <label for="momo">Thanh toán qua momo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="sidebar_header">
+                    <h2 class="sidebar_title">
+                        Đơn hàng (1 sản phẩm)
+                    </h2>
+                </div>
+                <div class="sidebar_content">
+                    <div class="sidebar_wrap">
+                        <div class="sidebar_product">
+                            <table class="product_table">
+                                <caption class="hidden">Chi tiết đơn hàng</caption>
+                                    <thead class="table_header">
+                                <tr>
+                                    <th>
+                                        <span class="hidden">Ảnh sản phẩm</span>
+                                    </th>
+                                    <th>
+                                        <span class="hidden">Mô tả</span>
+                                    </th>
+                                    <th>
+                                        <span class="hidden">Sổ lượng</span>
+                                    </th>
+                                    <th>
+                                        <span class="hidden">Đơn giá</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="product">
+                                    <td class="product__image">
+                                        <div class="product-thumbnail">
+                                            <div class="product_wrapper" data-tg-static>
+                                                <img src="unnamed.jpg"
+                                                     alt="product" class="product_image">
+                                            </div>
+                                            <span class="product_quantity">1</span>
+                                        </div>
+                                    </td>
+                                    <th class="product_description">
+                                        <span class="product_name">
+                                            Máy Tính Mini Gấu Bỏ Túi Dễ Thương
+                                        </span>
+                                        <span class="product_property">
+                                            Hồng
+                                        </span>
+                                    </th>
+                                    <td class="hidden"><em>Số lượng:</em> 1</td>
+                                    <td class="product_price">
+                                        29.000đ
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="promotion">
+                        <div class="promotion_form">
+                            <div class="promotion_input">
+                                <input type="text" placeholder="Mã khuyến mãi">
+                                <div>
+                                    <button type="submit">Áp dụng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <table class="total_table">
+                            <caption class="hidden">Tổng giá trị</caption>
+                            <thead>
+                                <tr>
+                                    <td><span class="hidden">Mô tả</span></td>
+                                    <td><span class="hidden">Giá tiền</span></td>
+                                </tr>
+                            </thead>
+                            <tbody class="total_table_tbody">
+                                <tr class="total-line_fee">
+                                    <th class="total-line_name">
+                                        Tạm tính
+                                    </th>
+                                    <td class="total-line_price">29.000₫</td>
+                                </tr>
+                                
+                                <tr class="total-line_shipping">
+                                    <th class="total-line_name">
+                                        Phí vận chuyển
+                                    </th>
+                                    <td class="total-line_price" data-bind="getTextShippingPrice()">
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                            
+                            <tfoot class="total-line-table_footer">
+                                <tr class="total-all">
+                                    <th class="total-line_name">
+                                        <span class="total_price_name">
+                                            Tổng cộng
+                                        </span>
+                                    </th>
+                                    <td class="total-line_price">
+                                        <span class="total_price" data-bind="getTextTotalPrice()"></span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="row_last">
+                        <div>
+                            <button type="submit" class="home">Quay về giỏ hàng</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="checkout">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
