@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="tab-title" >Profile</title>
+    <title>Stationery2</title>
     <!-- base -->
     <link
       rel="stylesheet"
@@ -52,12 +52,78 @@
 </head>
 <body>
     
+    <style>
+        .invoice {
+            /* margin-top: 16px; */
+        }
 
+        .invoice__item {
+            margin-top: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 1.4rem;
+        }
+
+        .invoice__item-img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .invoice__item-info {
+            margin-left: 16px;
+        }
+
+        .invoice__product-name {
+            font-weight: 500;
+            margin-bottom: 16px;
+            margin-top: 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+        }
+
+        .invoice__product-name:hover {
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .invoice__item-img:hover {
+            cursor: pointer;
+        }
+
+        .invoice__note {
+            margin-top: 24px;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 46.1875em) {
+            .menu-selector {
+                border-bottom: 1px solid #000;
+                margin-bottom: 24px;
+            }
+            .sec-2-item:last-child {
+                margin-bottom: 16px;
+            }
+
+            .invoice__item-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .invoice__product-name {
+                margin-top: 0px;
+            }
+        }
+    </style>
 
 
     <div class="wrapper">
         <header class="header"></header>
-        <div class="content">
+        <div class="content" style="margin-bottom: 300px;">
             <section class="p_section-1">
                 <div class="container">
                     <div class="sec-1-sub-title">
@@ -78,7 +144,7 @@
             <section class="p_section-2">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="menu-selector col col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
                             <div class="menu_user">
 
                                 <span class="user_menu-icon">
@@ -100,18 +166,8 @@
                                     </a>
                                 </li>
                                 <li class="sec-2-item">
-                                    <a href="#" class="sec-2-link cart_link">
-                                        Giỏ hàng của bạn
-                                    </a>
-                                </li>
-                                <li class="sec-2-item">
                                     <a href="#" class="sec-2-link pass_link">
                                         Đổi mật khẩu
-                                    </a>
-                                </li>
-                                <li class="sec-2-item">
-                                    <a href="#" class="sec-2-link address_link">
-                                       Sổ địa chỉ
                                     </a>
                                 </li>
                                 <li class="sec-2-item">
@@ -174,6 +230,16 @@
                                            <!-- render Phone -->
                                         </span>
                                     </div>
+                                    <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-3 col-3">
+                                        <span class="sec-2-tab-1-info">
+                                            Địa chỉ:
+                                        </span>
+                                    </div>
+                                    <div class="col col-xl-10 col-lg-9 col-md-8 col-sm-9 col-9">
+                                        <span class="sec-2-tab-1-in" id="p_address">
+                                           <!-- render Address -->
+                                        </span>
+                                    </div>
                                 </div>
                                 <span class="sec-2-tab-1-edit">
                                     Chỉnh Sửa Thông Tin
@@ -233,58 +299,9 @@
                                 <h2 class="sec-2-tab-5-title">
                                     Đơn Đã Mua
                                 </h2>
-                                <table id="order_table-buy">
-                                    <thead>
-                                        <tr>
-                                            <td class="order_tHead"> Mã Sản Phẩm </td>
-                                            <td class="order_tHead">Loại Sản Phẩm</td>
-                                            <td class="order_tHead">Tên Sản Phẩm</td>
-                                            <td class="order_tHead">Giá Bán</td>
-                                            <td class="order_tHead">Số Lượng</td>
-                                            <td class="order_tHead">Tổng Tiền</td>
-                                            <td class="order_tHead">Ngày Mua</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="order_tBody-item">121321</td>
-                                            <td class="order_tBody-item">Bút</td>
-                                            <td class="order_tBody-item">Bút Bi Viêt Nhanh Nhưng Không Viết Được</td>
-                                            <td class="order_tBody-item">12900đ</td>
-                                            <td class="order_tBody-item">12</td>
-                                            <td class="order_tBody-item">453343đ</td>
-                                            <td class="order_tBody-item">12/12/1223</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order_tBody-item">121321</td>
-                                            <td class="order_tBody-item">Bút</td>
-                                            <td class="order_tBody-item">Bút Bi Viêt Nhanh Nhưng Không Viết Được</td>
-                                            <td class="order_tBody-item">12900đ</td>
-                                            <td class="order_tBody-item">12</td>
-                                            <td class="order_tBody-item">453343đ</td>
-                                            <td class="order_tBody-item">12/12/1223</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order_tBody-item">121321</td>
-                                            <td class="order_tBody-item">Bút</td>
-                                            <td class="order_tBody-item">Bút Bi Viêt Nhanh Nhưng Không Viết Được</td>
-                                            <td class="order_tBody-item">12900đ</td>
-                                            <td class="order_tBody-item">12</td>
-                                            <td class="order_tBody-item">453343đ</td>
-                                            <td class="order_tBody-item">12/12/1223</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order_tBody-item">121321</td>
-                                            <td class="order_tBody-item">Bút</td>
-                                            <td class="order_tBody-item">Bút Bi Viêt Nhanh Nhưng Không Viết Được</td>
-                                            <td class="order_tBody-item">12900đ</td>
-                                            <td class="order_tBody-item">12</td>
-                                            <td class="order_tBody-item">453343đ</td>
-                                            <td class="order_tBody-item">12/12/1223</td>
-                                        </tr>
-                                       
-                                    </tbody>
-                                </table>
+                                <div class="invoice">
+                                    
+                                </div>
                                
                             </section>
                             <section class="sec-2-tab-6">
@@ -431,6 +448,30 @@
 
         </div>
     </div>
+    <!-- slide-in-user-cart -->
+    <input hidden type="checkbox" name="" class="cart-input" id="cart-input-id">
+    <label for="cart-input-id" class="overlay"></label>
+    <div class="slide-in-cart">
+        <div class="slide-in-cart__heading">
+            <h4 class="slide-in-cart__title">GIỎ HÀNG</h4>
+            <label for="cart-input-id" class="slide-in-cart__close">
+                <svg class="slide-in-cart__close-icon" viewBox="0 0 16 14">
+                    <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                </svg>
+            </label>
+        </div>
+        <ul class="cart__list">
+           <!-- render -->
+        </ul>
+        <div class="cart__pay">
+            <div class="cart__pay-totalPrice">
+                <div class="cart__pay-totalPrice-text">Tổng tiền</div>
+                <div class="cart__pay-totalPrice-number">35.000₫</div>
+            </div>
+            <button class="cart__pay-btn">Đặt hàng</button>
+        </div>
+    </div>
+    <!-- Modal log-in, register -->
     <div class="modal js-modal-login js-modal-close">
         <div class="modal-container js-modal-container">
             <div class="modal-header">
@@ -543,6 +584,24 @@
             </div>
         </div>
     </div>
+   
+    <!-- js header text -->
+    <script>
+        $(document).ready(function() {
+            var slogans = ["Stationary lựa chọn số 1 của bạn - Hãy đến với chúng tôi", "Stationary lựa chọn số 1 cho bạn"]
+            var textBlock = $(".header__navbar-slogan span");
+            textBlock.html(slogans[1]);
+            var i = 0;
+                setInterval (function () {
+                    textBlock.fadeOut(function () {
+                        textBlock.html(slogans[i]);
+                        i++;
+                        if (i == 2) i = 0;
+                        textBlock.fadeIn();
+                    })  
+                }, 3000);
+        })
+    </script>
     <div class="animation_loading">
         <div class="loading">
             <img src="./assets/img/Chunk-3.4s-200px.gif" alt="" class="loading_img">
@@ -551,5 +610,68 @@
 </body>
 <script src="./assets/js/base.js"></script>
 <script src="./assets/js/render.js"></script>
+<script>
+        function  getUserFromLocal(){
+        return JSON.parse(localStorage.getItem('u'));
+    }
+    function pushUsertoLocal(array){
+        localStorage.setItem('u',JSON.stringify(array));
+    }
+    function getProductFromLocal(){
+        return JSON.parse(localStorage.getItem('p'));
+    }
+    function pushProductToLocal(array){
+        localStorage.setItem('p',JSON.stringify(array));
+    }
+    function getInvoiceFromLocal(){
+        return JSON.parse(localStorage.getItem('i'));
+    }
+    function pushInvoiceToLocal(array){
+        localStorage.setItem('i',JSON.stringify(array));
+    }
+
+    var htmlInvoice = '';
+    var listInvoice = getInvoiceFromLocal();
+    var listUser = getUserFromLocal();
+    var listProduct = getProductFromLocal();
+
+    let checkid;
+    for(var l = 0;l<listUser.length;l++){
+        if(listUser[l].login == true && listUser[l].permission == 'customer'){
+            checkid = listUser[l].id;
+        }
+    }
+
+    for (var i in listInvoice) {
+        if (listInvoice[i].pOfID == checkid) {
+            for (var p in listProduct) {
+                if (listInvoice[i].pID == listProduct[p].pID)
+                {
+                    htmlInvoice += `<div class="invoice__item">
+                                        <a href="./sanpham.html" onclick="return pushOneProductToLocal(${listProduct[p].pID})">
+                                            <img src="${listProduct[p].img}" alt="" class="invoice__item-img">
+                                        </a>
+                                        <div class="invoice__item-info">
+                                            <div class="invoice__product-name">
+                                                <a href="./sanpham.html" onclick="return pushOneProductToLocal(${listProduct[p].pID})">${listProduct[p].pName}
+                                                </a>
+                                            </div>
+                                            <div class="invoice__product-quantity">Số lượng: ${listInvoice[i].quantity}</div>
+                                            <div class="invoice__product-price">Đơn giá: ${convertToVnd(listProduct[p].price.toString())}</div>
+                                            <div class="invoice__product-date">Ngày mua: ${listInvoice[i].date}</div>
+                                        </div>
+                                    </div>`
+                }
+            }
+        }
+    }
+    if (htmlInvoice == '') {
+        htmlInvoice = '<div class="invoice__note">Bạn chưa mua sản phẩm nào!</div>';
+    }
+    $('.invoice').html(htmlInvoice);
+    function convertToVnd(num) {
+        return num.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    }
+</script>
 
 </html>

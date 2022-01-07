@@ -21,6 +21,11 @@ function checkEmail(email) {
     } 
 } 
 
+function checkAddress(address) { 
+    if (address == "") return false;
+    else return true;
+}
+
 function checkPhone(phone) {  
     var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
         if (vnf_regex.test(phone) == false) 
@@ -188,12 +193,12 @@ function renderNote_s5(){
                 count++;
                 htmlB = htmlB + `<div class="product-item">
                 <div class="product-action">
-                    <a href="./sanpham.html" class="product-action__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                    <a href="./sanpham.html" class="product-action__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                         <i class="ti-heart product-action__icon"></i>
                         <!-- <i class="fas fa-heart product-action__icon--liked"></i> -->
                     </a>
                 </div>
-                <a href="./sanpham.html" class="product-item__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                <a href="./sanpham.html" class="product-item__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                     <img src="${listProduct[i].img}" alt=""
                         class="product-item__img">
                 </a>
@@ -204,12 +209,11 @@ function renderNote_s5(){
                         <span class="product-item__price-old">${convertMoney(listProduct[i].oldPrice.toString())}₫</span>
                     </div>
                 </div>
-                    
-                        <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
-                            <i class="add-to-cart__icon ti-shopping-cart"></i>
-                            <span class="add-to-cart__text">Thêm vào giỏ</span>
-                        </button>
-             
+                
+                    <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
+                        <i class="add-to-cart__icon ti-shopping-cart"></i>
+                        <span class="add-to-cart__text" onclick = "handleAddCart('${listProduct[i].pID}')">Thêm vào giỏ</span>
+                    </button>
                 
             </div>`;
             }  
@@ -234,12 +238,12 @@ function renderPen_s5(){
                 count++;
                 htmlB = htmlB + `<div class="product-item">
                 <div class="product-action">
-                    <a href="./sanpham.html" class="product-action__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                    <a href="./sanpham.html" class="product-action__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                         <i class="ti-heart product-action__icon"></i>
                         <!-- <i class="fas fa-heart product-action__icon--liked"></i> -->
                     </a>
                 </div>
-                <a href="./sanpham.html" class="product-item__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                <a href="./sanpham.html" class="product-item__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                     <img src="${listProduct[i].img}" alt=""
                         class="product-item__img">
                 </a>
@@ -250,12 +254,11 @@ function renderPen_s5(){
                         <span class="product-item__price-old">${convertMoney(listProduct[i].oldPrice.toString())}₫</span>
                     </div>
                 </div>
-                    
-                        <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
-                            <i class="add-to-cart__icon ti-shopping-cart"></i>
-                            <span class="add-to-cart__text">Thêm vào giỏ</span>
-                        </button>
-             
+                
+                    <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
+                        <i class="add-to-cart__icon ti-shopping-cart"></i>
+                        <span class="add-to-cart__text" onclick = "handleAddCart('${listProduct[i].pID}')">Thêm vào giỏ</span>
+                    </button>
                 
             </div>`;
             }  
@@ -280,12 +283,12 @@ function renderPaper_s5(){
                 count++;
                 htmlB = htmlB + `<div class="product-item">
                 <div class="product-action">
-                    <a href="./sanpham.html" class="product-action__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                    <a href="./sanpham.html" class="product-action__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                         <i class="ti-heart product-action__icon"></i>
                         <!-- <i class="fas fa-heart product-action__icon--liked"></i> -->
                     </a>
                 </div>
-                <a href="./sanpham.html" class="product-item__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                <a href="./sanpham.html" class="product-item__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                     <img src="${listProduct[i].img}" alt=""
                         class="product-item__img">
                 </a>
@@ -296,12 +299,11 @@ function renderPaper_s5(){
                         <span class="product-item__price-old">${convertMoney(listProduct[i].oldPrice.toString())}₫</span>
                     </div>
                 </div>
-                    
-                        <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
-                            <i class="add-to-cart__icon ti-shopping-cart"></i>
-                            <span class="add-to-cart__text">Thêm vào giỏ</span>
-                        </button>
-             
+                
+                    <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
+                        <i class="add-to-cart__icon ti-shopping-cart"></i>
+                        <span class="add-to-cart__text" onclick = "handleAddCart('${listProduct[i].pID}')">Thêm vào giỏ</span>
+                    </button>
                 
             </div>`;
             }  
@@ -326,12 +328,12 @@ function renderColorPen_s5(){
                 count++;
                 htmlB = htmlB + `<div class="product-item">
                 <div class="product-action">
-                    <a href="./sanpham.html" class="product-action__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                    <a href="./sanpham.html" class="product-action__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                         <i class="ti-heart product-action__icon"></i>
                         <!-- <i class="fas fa-heart product-action__icon--liked"></i> -->
                     </a>
                 </div>
-                <a href="./sanpham.html" class="product-item__link" onclick ="return pushOneProductToLocal('${listProduct[i].pID}')">
+                <a href="./sanpham.html" class="product-item__link" onclick = "return pushOneProductToLocal('${listProduct[i].pID}')">
                     <img src="${listProduct[i].img}" alt=""
                         class="product-item__img">
                 </a>
@@ -342,12 +344,11 @@ function renderColorPen_s5(){
                         <span class="product-item__price-old">${convertMoney(listProduct[i].oldPrice.toString())}₫</span>
                     </div>
                 </div>
-                    
-                        <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
-                            <i class="add-to-cart__icon ti-shopping-cart"></i>
-                            <span class="add-to-cart__text">Thêm vào giỏ</span>
-                        </button>
-             
+                
+                    <button style="background-color: var(--primary-color);" class="add-to-cart__btn add-to-cart__action">
+                        <i class="add-to-cart__icon ti-shopping-cart"></i>
+                        <span class="add-to-cart__text" onclick = "handleAddCart('${listProduct[i].pID}')">Thêm vào giỏ</span>
+                    </button>
                 
             </div>`;
             }  
@@ -435,7 +436,7 @@ function handleAddCart(id){
                 renderCartHome();
                 renderPayHome();
                 handleCountCart();
-                alert("Đã thêm sản phẩm của đại ca vào giỏ hàng");
+                alert("Đã thêm sản phẩm của bạn vào giỏ hàng");
             }
         }
     }
@@ -462,6 +463,12 @@ function getCartFromLocal(){
 }
 function pushCartToLocal(array){
     localStorage.setItem('c',JSON.stringify(array));
+}
+function getInvoiceFromLocal(){
+    return JSON.parse(localStorage.getItem('i'));
+}
+function pushInvoiceToLocal(array){
+    localStorage.setItem('i',JSON.stringify(array));
 }
  // login and register
        
@@ -555,7 +562,7 @@ function logout(){
                         modalRegister.classList.remove('open');
                         setTimeout(function(){   
                             window.location.reload();
-                        },2500);
+                        },1000);
                         
                 }
                break;
@@ -861,6 +868,7 @@ function renderUser(){
             $('#p_day').html(listUsers[i].day);
             $('#p_phone').html(listUsers[i].phone);
             $('.tab-title').html(listUsers[i].name);
+            $('#p_address').html(listUsers[i].address);
             // $('.sec-2-hi').html(`Xin Chào ${listUser[i].name}!`)
         }
     }
@@ -892,6 +900,10 @@ function renderChangeUser(){
                 <label for="tab-1-day" class="label-tab-1-1">Ngày sinh</label>
                 <input type="text" name="" value="${listUser[i].day}" id="tab-1-day" class="input_tab-1-1">
             </div>
+            <div class="tab-1-1-group">
+                <label for="tab-1-address" class="label-tab-1-1">Địa chỉ</label>
+                <input type="text" name="" value="${listUser[i].address}" id="tab-1-address" class="input_tab-1-1">
+            </div>
             <span class="btn_submit-changeUser" onclick = "changeUser()">
                 Lưu Thay Đổi
             </span>
@@ -919,10 +931,13 @@ function changeUser(){
             if($('#tab-1-day').val()){
                 listUser[i].day = $('#tab-1-day').val();
             }
+            if($('#tab-1-address').val()){
+                listUser[i].address = $('#tab-1-address').val();
+            }
 
         }
     }
-    if(checkEmail($('#tab-1-1email').val()) && checkPhone($('#tab-1-1phone').val())){
+    if(checkEmail($('#tab-1-1email').val()) && checkPhone($('#tab-1-1phone').val()) && checkAddress( $('#tab-1-address').val() ) ){
 
         pushUsertoLocal(listUser);
         alert("Chỉnh sửa thông tin thành công");
@@ -931,8 +946,10 @@ function changeUser(){
         alert("Email sai định dạng");
     }else if(checkEmail($('#tab-1-1email').val()) && !checkPhone($('#tab-1-1phone').val())){
         alert("Số điện thoại sai định dạng");
+    }else if(checkEmail($('#tab-1-1email').val()) && checkPhone($('#tab-1-1phone').val()) && !checkAddress( $('#tab-1-address').val() ) ){
+        alert("Địa chỉ không được để trống!");
     }else {
-        alert("Email và số điện thoại sai định dạng");
+        alert("Email, số điện thoại và địa chỉ sai định dạng");
     }
 }
 
@@ -1196,11 +1213,57 @@ function renderPayHome(){
                         <div class="cart__pay-totalPrice-text">Tổng tiền</div>
                         <div class="cart__pay-totalPrice-number">${convertMoney(price.toString())}₫</div>
                     </div>
-                    <a href="./muahang.html" class = "cart__pay-btn"> Thanh Toán</a>
+                    <a class = "cart__pay-btn" onclick = "deleteOnPaying()"> Đặt hàng</a>
                    `;
 
         $('.cart__pay').html(htmlsPay);
 }
+
+function deleteOnPaying() {
+    let listCart = getCartFromLocal();
+    let listUser = getUserFromLocal();
+    let listInvoice = getInvoiceFromLocal();
+    let checkid;
+    for(var l = 0;l<listUser.length;l++){
+        if(listUser[l].login == true && listUser[l].permission == 'customer'){
+            checkid = listUser[l].id;
+        }
+    }
+
+    var today = new Date();
+    var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+    let checkCart = 0;
+    var length69 = listCart.length;
+    for (var i = 0; i < length69; ++i)
+    {
+        if(listCart[i].pOfID == checkid){
+            var obj = {};
+            obj.pID = listCart[i].pID;
+            obj.pOfID = listCart[i].pOfID;
+            obj.quantity = listCart[i].quantity;
+            obj.date = date;
+            listInvoice.push(obj);
+            listCart.splice(i, 1);
+            length69 = listCart.length;
+            i -= 1;
+            checkCart = 1;
+        }
+    }
+
+    if (checkCart == 1) {
+        pushCartToLocal(listCart);
+        pushInvoiceToLocal(listInvoice);
+        renderCartHome();
+        renderPayHome();
+        handleCountCart();
+        alert("Đã đặt hàng! Hãy vào \"Tài khoản của tôi\" -> \"Đơn đã mua\" để xem lại các sản phẩm đã đặt");
+    }
+    else {
+        alert("Chưa mua hàng mà sao đặt được!")
+    }
+            
+}
+
 
 function createProduct(){
     let listUser = getUserFromLocal();
@@ -1488,7 +1551,7 @@ function renderPay(){
                         <span class="sec-2-pay-price">
                          ${price}đ
                          </span>
-                        <a href="./muahang.html" class="sec-2-pay-link">
+                        <a class="sec-2-pay-link">
                          Mua hàng
                          </a>
                         </div>`;

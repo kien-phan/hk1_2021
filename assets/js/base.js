@@ -741,7 +741,7 @@ var listUser = [
         phone: '1234556',
         day: '07/07/2002',
         login: false,
-        permission: 'admin',
+        permission: 'customer',
         address: '212 đập đá, quân 1, sài gòn',
 
     },
@@ -832,6 +832,18 @@ var listCart = [
     },
 
 ];
+
+var listInvoice = [
+    {
+        pID: '7',
+        pOfID: '69',
+        quantity: 1,
+        date: '20/1/2022'
+    }
+]
+
+
+
 var listHistory = [
     {
         id: '1',
@@ -996,7 +1008,12 @@ function checkDataStatisNext(){
 }
 
 
-
+function getInvoiceFromLocal(){
+    return JSON.parse(localStorage.getItem('i'));
+}
+function pushInvoiceToLocal(array){
+    localStorage.setItem('i',JSON.stringify(array));
+}
 
 
 function start(){
@@ -1013,7 +1030,9 @@ function start(){
         pushDataStatisticalToLocal(dataStatisticalNew);
     }
     checkDataStatisNext();
-
+    if(!getInvoiceFromLocal()){
+        pushInvoiceToLocal(listInvoice);
+    }
 }
 start();
 
