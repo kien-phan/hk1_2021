@@ -1224,43 +1224,54 @@ function deleteOnPaying() {
     let listUser = getUserFromLocal();
     let listInvoice = getInvoiceFromLocal();
     let checkid;
+    let checkAddress = true;
     for(var l = 0;l<listUser.length;l++){
         if(listUser[l].login == true && listUser[l].permission == 'customer'){
             checkid = listUser[l].id;
+            if (listUser[l].address == '')
+            {
+                checkAddress = false;
+            }
+            break;
         }
     }
-
-    var today = new Date();
-    var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-    let checkCart = 0;
-    var length69 = listCart.length;
-    for (var i = 0; i < length69; ++i)
-    {
-        if(listCart[i].pOfID == checkid){
-            var obj = {};
-            obj.pID = listCart[i].pID;
-            obj.pOfID = listCart[i].pOfID;
-            obj.quantity = listCart[i].quantity;
-            obj.date = date;
-            listInvoice.push(obj);
-            listCart.splice(i, 1);
-            length69 = listCart.length;
-            i -= 1;
-            checkCart = 1;
+    if (checkAddress == true) {
+            var today = new Date();
+        var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+        let checkCart = 0;
+        var length69 = listCart.length;
+        for (var i = 0; i < length69; ++i)
+        {
+            if(listCart[i].pOfID == checkid){
+                var obj = {};
+                obj.pID = listCart[i].pID;
+                obj.pOfID = listCart[i].pOfID;
+                obj.quantity = listCart[i].quantity;
+                obj.date = date;
+                listInvoice.push(obj);
+                listCart.splice(i, 1);
+                length69 = listCart.length;
+                i -= 1;
+                checkCart = 1;
+            }
         }
-    }
 
-    if (checkCart == 1) {
-        pushCartToLocal(listCart);
-        pushInvoiceToLocal(listInvoice);
-        renderCartHome();
-        renderPayHome();
-        handleCountCart();
-        alert("Đã đặt hàng! Hãy vào \"Tài khoản của tôi\" -> \"Đơn đã mua\" để xem lại các sản phẩm đã đặt");
+        if (checkCart == 1) {
+            pushCartToLocal(listCart);
+            pushInvoiceToLocal(listInvoice);
+            renderCartHome();
+            renderPayHome();
+            handleCountCart();
+            alert("Đã đặt hàng! Hãy vào \"Tài khoản của tôi\" -> \"Đơn đã mua\" để xem lại các sản phẩm đã đặt");
+        }
+        else {
+            alert("Chưa mua hàng mà sao đặt được!")
+        }
     }
     else {
-        alert("Chưa mua hàng mà sao đặt được!")
+        alert("Hãy vào \"Tài khoản của tôi\" và nhập địa chỉ trước!")
     }
+    
             
 }
 

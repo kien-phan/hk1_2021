@@ -351,7 +351,7 @@
                                 EMAIL
                                 <span>*</span>
                             </label>
-                            <input id="log-in-email" required type="email" class="modal-input" placeholder="Nhập Địa chỉ Email">
+                            <input id="log-in-email" required type="email" class="modal-input"  placeholder="Nhập Địa chỉ Email">
                         </li>
                         <li class="modal-body__item">
                             <label for="log-in-password" class="modal-label">
@@ -361,14 +361,12 @@
                             <input id="log-in-password" required type="password" class="modal-input" placeholder="Nhập Mật khẩu">
                         </li>
                     </ul>
-
                     <a href="" class="modal__forget-pass">Quên mật khẩu?</a>
                     <div class="modal-body__btn">
                         <button class="modal__btn js-modal-close">Trở lại</button>
-                        <input type="submit" class="modal__btn" value="Đăng nhập"></input>
+                        <input type="button" id="btn_submit-login" class="modal__btn" value="Đăng nhập"></input>
                     </div>
                 </form>
-
                 <p class="log-in-note">Stationery cam kết bảo mật và sẽ không bao giờ đăng
                 hay chia sẻ thông tin mà chưa có được sự đồng ý của bạn.</p>
             </div>
@@ -383,6 +381,7 @@
             </div>
         </div>
     </div>
+    
     <div class="modal js-modal-register js-modal-close">
         <div class="modal-container js-modal-container">
             <div class="modal-header">

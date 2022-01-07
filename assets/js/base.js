@@ -877,45 +877,45 @@ var listHistory = [
     },
 ];
 
-var dataStatisticalNew = [
-    {
-        year: '2021',
-        month: '12',
-        data: [
-            [122,523000],
-            [12,50230],
-            [12,50000],
-            [102,59300],
-            [12,10200],
-            [92,12000],
-            [12,50000],
-            [12,231230],
-            [52,50000],
-            [12,50000],
-            [12,50000],
-            [12,12300],
-            [82,50000],
-            [12,50000],
-            [12,50000],
-            [12,50000],
-            [72,32100],
-            [12,50000],
-            [62,50000],
-            [12,54400],
-            [12,50000],
-            [12,50000],
-            [12,5230],
-            [32,50000],
-            [12,50000],
-            [65,50000],
-            [12,53200],
-            [12,50000],
-            [122,50000],
-            [12,50000],
-            [92,50000],
-        ],
-    }
-];
+// var dataStatisticalNew = [
+//     {
+//         year: '2021',
+//         month: '12',
+//         data: [
+//             [122,523000],
+//             [12,50230],
+//             [12,50000],
+//             [102,59300],
+//             [12,10200],
+//             [92,12000],
+//             [12,50000],
+//             [12,231230],
+//             [52,50000],
+//             [12,50000],
+//             [12,50000],
+//             [12,12300],
+//             [82,50000],
+//             [12,50000],
+//             [12,50000],
+//             [12,50000],
+//             [72,32100],
+//             [12,50000],
+//             [62,50000],
+//             [12,54400],
+//             [12,50000],
+//             [12,50000],
+//             [12,5230],
+//             [32,50000],
+//             [12,50000],
+//             [65,50000],
+//             [12,53200],
+//             [12,50000],
+//             [122,50000],
+//             [12,50000],
+//             [92,50000],
+//         ],
+//     }
+// ];
 
 function  getUserFromLocal(){
     return JSON.parse(localStorage.getItem('u'));
@@ -985,27 +985,27 @@ function createDateinMonth(month){
 
 
 
-var d = new Date;
-var currentMonth = d.getMonth()+1;
-var currentYear  = d.getFullYear();
+// var d = new Date;
+// var currentMonth = d.getMonth()+1;
+// var currentYear  = d.getFullYear();
 
-function checkDataStatisNext(){
-    var array = getDataStatisticalFromLocal();
-    var check  = false;
-    var obj = new Object;
-    for(let i = 0;i<array.length;i++){
-        if(array[i].month == currentMonth && array[i].year == currentYear){
-            check = true;
-        }
-    }
-    if(!check){    
-        obj.year = currentYear;
-        obj.month = currentMonth;
-        obj.data = createDateinMonth();
-        array.push(obj);
-        pushDataStatisticalToLocal(array);
-    }
-}
+// function checkDataStatisNext(){
+//     var array = getDataStatisticalFromLocal();
+//     var check  = false;
+//     var obj = new Object;
+//     for(let i = 0;i<array.length;i++){
+//         if(array[i].month == currentMonth && array[i].year == currentYear){
+//             check = true;
+//         }
+//     }
+//     if(!check){    
+//         obj.year = currentYear;
+//         obj.month = currentMonth;
+//         obj.data = createDateinMonth();
+//         array.push(obj);
+//         pushDataStatisticalToLocal(array);
+//     }
+// }
 
 
 function getInvoiceFromLocal(){
@@ -1026,10 +1026,10 @@ function start(){
     if(!getCartFromLocal()){
         pushCartToLocal(listCart);
     }
-    if(!getDataStatisticalFromLocal()){
-        pushDataStatisticalToLocal(dataStatisticalNew);
-    }
-    checkDataStatisNext();
+    // if(!getDataStatisticalFromLocal()){
+    //     pushDataStatisticalToLocal(dataStatisticalNew);
+    // }
+    // checkDataStatisNext();
     if(!getInvoiceFromLocal()){
         pushInvoiceToLocal(listInvoice);
     }
